@@ -1,4 +1,4 @@
-package inheritance;
+package customer;
 
 public class Customer {
 	
@@ -22,7 +22,7 @@ public class Customer {
 		bonusRatio = 0.01;
 	}
 	
-	public int clacPrice(int price) {
+	public int calcPrice(int price) {
 		bonusPoint += price * bonusRatio;	// 보너스를 계산해서 누적해
 		return price;
 	}

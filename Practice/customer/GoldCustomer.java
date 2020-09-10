@@ -1,4 +1,4 @@
-package polymorphism;
+package customer;
 
 public class GoldCustomer extends Customer {
 
