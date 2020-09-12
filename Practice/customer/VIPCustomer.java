@@ -1,43 +1,39 @@
-package customer;
+package practice.customer;
 
-public class VIPCustomer extends Customer{
+public class VIPCustomer extends Customer {
 
-	private double salesRatio;
-	private int agentID;
+	private String agnetID;		// 담당 상담원 ID
+	private int salesRatio;		// 할인율
 	
-	public VIPCustomer(int customerID, String customerName, int agentID) {
+	// Customer 클래스에서 매개변수가 있는 생성자를 따로 호출해줘야 한다. (기본 생성자가 없으므로) 
+	public VIPCustomer(int customerID, String customerName) {
 		super(customerID, customerName);
-
+		
+		// VIP 혜택 설정
 		customerGrade = "VIP";
-		bonusRatio = 0.05;		// 적립률 5%로 설정
-		salesRatio = 0.1;		// 할인율 10%로 설정
-		this.agentID = agentID;
+		bonusRatio = 0.05;
+		bonusRatio = 0.1;
+		this.agnetID = agnetID;
 	}
 	
 	@Override
 	public int calcPrice(int price) {
-		bonusPoint += price * bonusRatio;
-		return price - (int)(price * salesRatio);
-	}
-
-	@Override
-	public String showCustomerInfo() {
-		return super.showCustomerInfo() + " 담당 상담원 번호는 " + agentID + "입니다.";
+		
 	}
 	
-	public double getSalesRatio() {
+	public String getAgnetID() {
+		return agnetID;
+	}
+
+	public void setAgnetID(String agnetID) {
+		this.agnetID = agnetID;
+	}
+
+	public int getSalesRatio() {
 		return salesRatio;
 	}
 
-	public void setSalesRatio(double salesRatio) {
+	public void setSalesRatio(int salesRatio) {
 		this.salesRatio = salesRatio;
-	}
-
-	public int getAgentID() {
-		return agentID;
-	}
-
-	public void setAgentID(int agentID) {
-		this.agentID = agentID;
 	}
 }
