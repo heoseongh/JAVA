@@ -19,6 +19,13 @@ public class Customer {
 		bonusPoint += (price * bonusRatio);	// 보너스 포인트를 누적해줌
 		return price;
 	}
+	
+	public String showCustomerInfo() {
+		return customerName + "님의 등급은 " + 
+			   customerGrade + "이며, 적립된 포인트는 " +
+			   bonusPoint + "점 입니다.";
+	}
+	
 	public int getCustomerID() {
 		return customerID;
 	}
