@@ -10,14 +10,14 @@ public class CustomerTest {
 		
 		Customer Lee = new Customer(10010, "이순신");
 		Customer Shin = new Customer(10020, "신사임당");
-		//Customer Hong = new GoldCustomer(10030, "홍길동");
-		//Customer Yul = new GoldCustomer(10040, "이율곡");
+		Customer Hong = new GoldCustomer(10030, "홍길동");
+		Customer Yul = new GoldCustomer(10040, "이율곡");
 		Customer Kim = new VIPCustomer(10050, "김유신", 12345);
 		
 		customerList.add(Lee);
 		customerList.add(Shin);
-		//customerList.add(Hong);
-		//customerList.add(Yul);
+		customerList.add(Hong);
+		customerList.add(Yul);
 		customerList.add(Kim);
 		
 		System.out.println("=============== 고객 정보 출력 ===============");

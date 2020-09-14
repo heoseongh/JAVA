@@ -12,7 +12,7 @@ public class VIPCustomer extends Customer {
 		// VIP 혜택 설정
 		customerGrade = "VIP";
 		bonusRatio = 0.05;
-		bonusRatio = 0.1;
+		salesRatio = 0.1;
 		this.agnetID = agnetID;
 	}
 	
@@ -20,6 +20,11 @@ public class VIPCustomer extends Customer {
 	public int calcPrice(int price) {
 		bonusPoint += (price * bonusRatio);
 		return price - (int)(price * salesRatio);
+	}
+	
+	@Override
+	public String showCustomerInfo() {
+		return super.showCustomerInfo() + " 담당 상담원 번호는 " + agnetID + "입니다.";
 	}
 
 	public int getAgnetID() {

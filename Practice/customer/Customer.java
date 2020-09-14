@@ -25,7 +25,7 @@ public class Customer {
 			   customerGrade + "이며, 적립된 포인트는 " +
 			   bonusPoint + "점 입니다.";
 	}
-	
+
 	public int getCustomerID() {
 		return customerID;
 	}
