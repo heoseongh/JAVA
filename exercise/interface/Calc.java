@@ -11,7 +11,7 @@ public interface Calc {
 	int times(int num1, int num2);
 	int divide(int num1, int num2);
 	
-	// ** 디폴 메서드
+	// ** 디폴트 메서드
 	default void description() {
 		System.out.println("정수 계산기를 구현합니다.");
 	}
@@ -28,10 +28,10 @@ public interface Calc {
 		
 		return total;
 	}
-/*	
-	// ** private 메서드
+	//************************* java9 이후부터 지원 *************************
+/*	// ** private 메서드
 	private void myMethod() {
-		System.out.println("pricate method");
+		System.out.println("private method");
 	}
 	
 	private static void mystaticMethod() {
